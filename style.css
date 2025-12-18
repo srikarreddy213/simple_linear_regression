@@ -1,0 +1,105 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Dark Russian flag–inspired gradient: deep navy → muted blue → rich red */
+    background: radial-gradient(
+            circle at 0% 0%,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0) 40%
+        ),
+        linear-gradient(
+            180deg,
+            #020617 0%,
+            #020617 18%,
+            #071027 30%,
+            #0b1740 48%,
+            #102554 60%,
+            #2b1b27 75%,
+            #431320 88%,
+            #5a101b 100%
+        );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+/* kill streamlit paint */
+.stApp,
+section.main,
+section.main > div {
+    background: transparent !important;
+}
+
+/* Remove empty white gaps and keep layout centered and clean */
+.block-container {
+    background: transparent !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* layout (additional tweaks if needed) */
+main,
+header,
+footer {
+    background: transparent !important;
+}
+
+/* card */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-left: 6px solid #0039a6;
+}
+
+/* remove empty cards */
+.card:empty {
+    display: none;
+}
+
+/* headings */
+h1, h2, h3,
+h2[data-testid="stMarkdownContainer"] {
+    color: #e5e7eb !important;
+}
+
+/* inside white cards, keep dark text for readability */
+.card h1,
+.card h2,
+.card h3,
+.card p {
+    color: #0f172a !important;
+}
+
+/* dataframe wrapper */
+div[data-testid="stDataFrame"] {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* metrics */
+div[data-testid="metrics-container"] {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid rgba(0,57,166,0.15);
+}
+
+/* prediction */
+.predicition-box {
+    background: linear-gradient(135deg, #0039a6, #d52b1e);
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
